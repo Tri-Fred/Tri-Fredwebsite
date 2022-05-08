@@ -1,0 +1,52 @@
+@font-face{
+    font-family: CaviarDreams;
+    src: url(CaviarDreams.ttf); 
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: CaviarDreams;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto auto auto;
+    background: rgb(255,206,159);
+    background: radial-gradient(circle, rgba(255,206,159,1) 15%, rgba(255,132,156,1) 74%);
+}
+nav {
+    font-size: 50px;
+    grid-column: 1/2;
+    height: 60vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+}
+    
+nav a {
+    justify-self: center;
+    text-decoration: none;
+    color:black;
+}
+
+.main {
+    font-size: 6vw;
+    grid-column: span 2;
+    border-bottom:20px black solid;
+    
+}
+
+section {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.lower {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 45px;
+    border-top: 20px black solid;
+}
