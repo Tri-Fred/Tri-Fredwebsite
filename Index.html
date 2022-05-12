@@ -2,6 +2,30 @@
 <head>
     <title>Goes In Tab</title>
     <link rel="stylesheet" href= "styles.css">
+    <script>
+        var imgs = ['Photoframe.jpg','Dinosaur.jpg','Glassaquarium.jpg'];
+        var imgSrcNum = 0;
+
+        function left(){
+            var currentimg = document.getElementById('slider');
+            if(imgSrcNum == 0){
+                imgSrcNum = imgs.length-1;
+            } else {
+                imgSrcNum--;
+            }
+            currentimg.src = imgs[imgSrcNum];
+        }
+        function right(){
+            var currentimg = document.getElementById('slider');
+            if(imgSrcNum == 0){
+                imgSrcNum = imgs.length+1;
+            } else {
+                imgSrcNum++;
+            }
+            currentimg.src = imgs[imgSrcNum];
+        }
+    </script>
+
 </head>
 <body>
     <h1 class="main">Tri-Fred | Visual Designer | Artist</h1>
@@ -11,7 +35,9 @@
         <a href="Links.html">Links</a>
     </nav>
     <section>
-        <p>here is where the images will go</p>
+        <div onclick="left()" class="LEFTarrow"><p><</p></div>
+        <img id="slider" src="Photoframe.jpg"width="300'">
+        <div onclick="right()" class="RIGHTarrow"><p>></p></div>
     </section>
     <div class="lower">
         <p1>
@@ -23,7 +49,5 @@
             <p>
             Check it out on Opensea to support the cause.
         </p1>
-      
-        
     </div>
 </body>

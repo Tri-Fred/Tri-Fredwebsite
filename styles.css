@@ -30,6 +30,7 @@ nav a {
     justify-self: center;
     text-decoration: none;
     color:black;
+
 }
 
 .main {
@@ -40,13 +41,31 @@ nav a {
 }
 
 section {
+    margin: 20px;
     grid-column: 2/3;
     grid-row: 2/3;
+    
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 10px;
+}
+
+
+.LEFTarrow {
+    font-size: 300px;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+}
+.RIGHTarrow {
+    font-size: 300px;
+    cursor: pointer;
 }
 
 .lower {
     grid-column: span 2;
     text-align: center;
-    font-size: 45px;
+    font-size: 38px;
     border-top: 20px black solid;
-}
+} 
