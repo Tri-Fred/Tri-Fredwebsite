@@ -1,71 +1,118 @@
+/*Fonts     */
 @font-face{
     font-family: CaviarDreams;
     src: url(CaviarDreams.ttf); 
+    font-family:Cinzel;
+    src:url(Cinzel.ttf);
 }
-
+    /*To Make sure everything is spaced to 
+    the right correctly*/
 * {
     margin: 0px;
     padding: 0px;
 }
-
+    /*Background control, base grid layout*/
 body {
     font-family: CaviarDreams;
     display: grid;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 60vh auto;
     background: rgb(255,206,159);
     background: radial-gradient(circle, rgba(255,206,159,1) 15%, rgba(255,132,156,1) 74%);
 }
+    /*Navigation features*/
 nav {
-    font-size: 50px;
+    font-size: 70px;
     grid-column: 1/2;
     height: 60vh;
+    border-right:black 5px solid;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
 }
-    
+    /*Hover State*/
+nav a:hover {
+    font-size:75px;
+}
+    /*Link decoration*/
 nav a {
     justify-self: center;
     text-decoration: none;
     color:black;
-
+    padding-right:50px;
 }
-
+    /*Title and text decoration*/
 .main {
+    font-family: cin;
     font-size: 6vw;
     grid-column: span 2;
     border-bottom:20px black solid;
-    
 }
-
+    /*Scrolling image display settings*/
 section {
     margin: 20px;
     grid-column: 2/3;
     grid-row: 2/3;
     
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 10px;
 }
-
-
+    /*Left arrow for scrolling img*/
 .LEFTarrow {
-    font-size: 300px;
-    cursor: pointer;
-}
-img {
-    width: 100%;
-}
-.RIGHTarrow {
+    width: 80%;
+    height:80%;
     font-size: 300px;
     cursor: pointer;
 }
 
+    /*scrolling image dimensions*/
+img {
+    width: 80%;
+    height:100%;
+}
+    /*Right arrow for scrolling img*/
+.RIGHTarrow {
+    width:80%;
+    height: 80%;
+    font-size: 300px;
+    cursor: pointer;
+}
+    /*bottom part-main text*/
 .lower {
     grid-column: span 2;
     text-align: center;
     font-size: 38px;
     border-top: 20px black solid;
 } 
+/*Grid layout for links tab*/
+.Links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 290px 290px;
+    grid-gap:10px;
+
+    justify-items: center;
+}
+/*Link stylization*/
+.Links a {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    width: 100%; 
+}
+/*Link img dimensions*/
+.Links img {
+    width: 30%;
+    height: 50%;
+    
+}
+/*Email Stylization*/
+.email {
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    width:50%;
+    height:100%;
+}

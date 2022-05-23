@@ -1,5 +1,55 @@
-<nav>
+<!doctype html>
+<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<title>EHC Gallery</title>
+<body>
+    <h1 class="main">Egg Heads Club Gallery</h1>
+    <script>
+        var imgs = ['images/ehc1.png','images/ehc2.png','images/ehc3.png','images/ehc4.png','images/ehc5.png','images/ehc6.png','images/ehc7.png',
+        'images/ehc8.png','images/ehc9.png','images/ehc10.png','images/ehc11.png','images/ehc12.png','images/ehc13.png','images/ehc14.png',
+        'images/ehc15.png','images/ehc16.png','images/ehc17.png','images/ehc18.png','images/ehc19.png','images/ehc20.png'];
+        var imgSrcNum = 0;
+
+        function left(){
+            var currentimg = document.getElementById('slider');
+            if(imgSrcNum == 0){
+                imgSrcNum = imgs.length-1;
+            } else {
+                imgSrcNum--;
+            }
+            currentimg.src = imgs[imgSrcNum];
+    }
+    function right(){
+        var currentimg = document.getElementById('slider');
+        if(imgSrcNum == imgs.length-1){
+            imgSrcNum = 0;
+        } else {
+            imgSrcNum++;
+        }
+        currentimg.src = imgs[imgSrcNum];
+    }
+    </script>
+
+
+    <section>
+        <div onclick="left()" class="LEFTarrow"><img src="images/leftarrow.png" alt="Leftarrow"></div>
+        <img id="slider" src="images/ehc1.png" alt="startimage">
+        <div onclick="right()" class="RIGHTarrow"><img src="images/rightarrow.png" alt="Rightarrow"></div>
+    </section>
+<nav>  
     <a href="Index.html">Home</a>
     <a href="Contact.html">Contact</a>
     <a href="Links.html">Links</a>
 </nav>
+<div class="lower">
+    <p>
+        Here are a few sneak peaks of my latest project
+    <P>
+        The Egg Heads Club is a collection of 1000 unique NFTs
+    <p>
+        That can be purchased on Opensearch
+    <p>
+        Find a link to the Opensea Page in the Contact Tab.
+    </p>
+</div>
+</body>

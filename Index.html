@@ -1,9 +1,10 @@
 <!doctype html>
 <head>
-    <title>Goes In Tab</title>
+    <meta charset="utf-8">
+    <title>Tri-Fred Homepage</title>
     <link rel="stylesheet" href= "styles.css">
     <script>
-        var imgs = ['Photoframe.jpg','Dinosaur.jpg','Glassaquarium.jpg'];
+        var imgs = ['images/Photoframe.jpg','images/Dinosaur.jpg','images/Glassaquarium.jpg'];
         var imgSrcNum = 0;
 
         function left(){
@@ -17,8 +18,8 @@
         }
         function right(){
             var currentimg = document.getElementById('slider');
-            if(imgSrcNum == 0){
-                imgSrcNum = imgs.length+1;
+            if(imgSrcNum == imgs.length-1){
+                imgSrcNum = 0;
             } else {
                 imgSrcNum++;
             }
@@ -35,19 +36,19 @@
         <a href="Links.html">Links</a>
     </nav>
     <section>
-        <div onclick="left()" class="LEFTarrow"><p><</p></div>
-        <img id="slider" src="Photoframe.jpg"width="300'">
-        <div onclick="right()" class="RIGHTarrow"><p>></p></div>
+        <div onclick="left()" class="LEFTarrow"><img src="images/leftarrow.png" alt="Leftarrow"></div>
+        <img id="slider" src="images/Photoframe.jpg" alt="startimage">
+        <div onclick="right()" class="RIGHTarrow"><img src="images/rightarrow.png" alt="Rightarrow"></div>
     </section>
     <div class="lower">
-        <p1>
+        <p>
             My latest project is: The Egg Heads Club
-            <P>
+        <P>
             A collection of 10,000 unique NFTs with varying attributes and the same Egg-Shaped head.
-            <p>
+        <p>
             20% of all profits go to The International Rescue Committee to help struggling families in Ukraine.
-            <p>
+        <p>
             Check it out on Opensea to support the cause.
-        </p1>
+        </p>
     </div>
 </body>
